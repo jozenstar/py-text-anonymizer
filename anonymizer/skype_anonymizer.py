@@ -26,8 +26,5 @@ class SkypeUsernameAnonymizer(BaseAnonymizer):
         :param str text:
         :rtype: str
         """
-        #if not re.match(r'\+\d+ \d+', text):
-        #    print("data is not valid")
-        #    raise ValueError
         skype = re.sub(r':\w+\?', ':' + self._repl + '?', text)
         return skype

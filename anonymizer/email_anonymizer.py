@@ -37,7 +37,3 @@ class EmailAnonymizer(BaseAnonymizer):
                            self._replacement + r'\1', text)
         finally:
             return email
-
-        #
-        # @TODO: Implement it
-        #

@@ -33,9 +33,6 @@ class PhoneNumberAnonymizer(BaseAnonymizer):
         :param str text:
         :rtype: str
         """
-       # if not re.match(r'\+\d+ \d+', text):
-        #    print("data is not valid")
-       #     raise ValueError
         phone = re.sub(r'(\+\d+ \d*)\d{' + str(self._digits) + '}[\t]?',
                        r'\1' + self._repl*self._digits, text)
         return phone
